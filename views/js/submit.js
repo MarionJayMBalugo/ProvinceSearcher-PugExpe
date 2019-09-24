@@ -21,22 +21,15 @@ $(document).ready(function() {
     });
 });
 function transfer(x) {
-    alert("yeah");
+    
     var pathname = window.location.pathname;
+    alert(pathname);
         $.ajax({
             url: 'http://127.0.0.1:8080' + pathname,
             crossDomain: 'true',
             data: JSON.stringify({
                 rate: x,
             }),
-            type: 'POST',
-            success: function(response) {
-                console.log("rated");
-
-            },
-            error: function(err) {
-
-
-            }
-        })
+            type: 'POST'
+                    })
 }

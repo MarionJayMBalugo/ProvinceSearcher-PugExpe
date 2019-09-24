@@ -1,8 +1,7 @@
+
 {
   "name": "Davao",
-  "img_1": "/public/images/davao.jpg",
-  "img_2": "/public/images/davao1.jpg",
-  "img_3": "/public/images/davao2.jpg",
+  "img": ["/public/images/davao.jpg","/public/images/davao1.jpg","/public/images/davao2.jpg"],
   "group": "Mindanao",
   "population": "550000",
   "delicacies": [

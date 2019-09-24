@@ -10,7 +10,7 @@ exports.addFile = (function(req, res) {
         fs.readFile("./province/" + req.path.split('/')[2] + '.json', function(err, data) {
 
             if (err) {
-                res.send(err);
+                res.sendStatus(404);
             }
             dic = JSON.parse(data);
             var num2 = dic.rate;

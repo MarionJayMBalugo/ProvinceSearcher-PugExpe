@@ -1,8 +1,6 @@
 {
   "name": "Cavite",
-  "img_1": "/public/images/cavite.jpg",
-  "img_2": "/public/images/cavite2.jpg",
-  "img_3": "/public/images/cavite3.jpg",
+  "img": ["/public/images/cavite.jpg","/public/images/cavite2.jpg","/public/images/cavite3.jpg"],
   "group": "Mindanao",
   "population": "550000",
   "delicacies": [

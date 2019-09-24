@@ -1,8 +1,7 @@
+
 {
     "name": "Leyte",
-    "img_1": "/public/images/leyte.jpg",
-    "img_2": "/public/images/leyte2.jpg",
-    "img_3": "/public/images/leyte3.jpg",
+    "img1": ["/public/images/leyte.jpg","/public/images/leyte2.jpg","/public/images/leyte3.jpg"],
     "group": "Visayas",
     "population": "1000000",
     "delicacies": [

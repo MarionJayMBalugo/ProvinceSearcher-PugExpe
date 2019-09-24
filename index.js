@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const adding = require('./views/js/add');
+const adding = require('./add');
 const path = require('path');
-
 app.listen('8080', console.log('listening to port 8080'));
 app.set('view engine', 'pug');
 
@@ -31,8 +30,7 @@ app.get('/province/:provinceName', (req, res) => {
         }
 
         var dats = JSON.parse(data);
-
-        res.render('index', {dats });
+        res.render('index', {dats});
     });
 
 });
@@ -47,6 +45,6 @@ app.get('*', (req, res) => {
 });
 
 app.post('/province/*', function(req, res) {
-  
+    console.log("yo");
     adding.addFile(req, res);
 })
