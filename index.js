@@ -3,26 +3,17 @@ const app = express();
 const fs = require('fs');
 const adding = require('./add');
 const path = require('path');
+const requestjs=require("./reques");
 app.listen('8080', console.log('listening to port 8080'));
 app.set('view engine', 'pug');
 
-app.use("/public", express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-    console.log("counted")
-    fs.readFile('counter.txt', function(err, data) {
-        dic = JSON.parse(data);
-        console.log(dic);
-        var cnt = dic + 1;
-
-        fs.writeFile('counter.txt', cnt, (err) => {
-            if (err) throw err;
-            console.log('Done!');
-            next();
-        });
-    });
-
+    requestjs.hoi();
+    next();
 });
+app.use( express.static(path.join( __dirname,'./public')));
+
 app.get('/province/:provinceName', (req, res) => {
     fs.readFile('./province/' + req.params.provinceName + '.json', (e, data) => {
         if (e) {
@@ -34,17 +25,11 @@ app.get('/province/:provinceName', (req, res) => {
     });
 
 });
-
-app.get('/rate', (req, res) => {
-    res.render('rate');
-
-});
-
 app.get('*', (req, res) => {
     res.sendStatus(404);
 });
 
-app.post('/province/*', function(req, res) {
-    console.log("yo");
-    adding.addFile(req, res);
+app.post('/rate', function(req, res) {
+   
+     adding.addFile(req, res);
 })

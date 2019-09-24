@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    title Provinces in the Philippines
+    style
+      include ./views/stylesheets/style.css 
+    script
+      include ./views/js/jquery-3.4.1.min.js
+      include ./views/js/submit.js
+  body
+    h1#h1=dats.name
+    h2=dats.group +' Group of Islands'
+    div
+      img(src=dats.img[0])
+      img(src=dats.img[1])
+      img(src=dats.img[2])
+    p=dats.population +" number of people living in "+dats.name
+    h4=dats.name+"'s most known delicacies :"
+    ul      
+      each val in dats.delicacies
+        li= val
+    div
+      h2 history
+      p= dats.hist
+      p='average rating of '+dats.name +' is '+ dats.rate
+    div
+      h3 rate us
+      button#1 1
+      button#2 2
+      button#3 3
+      button#4 4
+      button#5 5
+      
+
+    
+   

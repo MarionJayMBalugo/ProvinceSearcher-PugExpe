@@ -22,14 +22,13 @@ $(document).ready(function() {
 });
 function transfer(x) {
     
-    var pathname = window.location.pathname;
-    alert(pathname);
-        $.ajax({
-            url: 'http://127.0.0.1:8080' + pathname,
-            crossDomain: 'true',
-            data: JSON.stringify({
-                rate: x,
-            }),
-            type: 'POST'
-                    })
+    $.ajax({
+        url: '/rate',
+        crossDomain: 'true',
+        data: JSON.stringify({
+            shortname:$("#h1").html(),
+            rate: x,
+        }),
+        type: 'POST'
+    })
 }
