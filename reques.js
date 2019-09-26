@@ -1,10 +1,16 @@
  const fs=require("fs");
- exports.hoi=function(){
+ exports.hoi=function(req,res){
+    var cnt=0;
     fs.readFile('counter.txt', function(err, data) {
-        var cnt = (data*1)+ 1;
+        if(err) throw err;
+        cnt = (data*1)+1;
         fs.writeFile('counter.txt', cnt, (err) => {
             if (err) throw err;
-            console.log('Done!');
-        });
+            console.log(cnt);
+            res.end();
+        });  
     });
+    
+ 
+    
 }

@@ -1,9 +1,9 @@
 {
   "name": "Cebu",
   "img": [
-    "/public/images/cebu.jpg",
-    "/public/images/cebu1.jpg",
-    "/public/images/cebu2.jpg"
+    "/images/cebu.jpg",
+    "/images/cebu3.jpg",
+    "/images/cebu2.jpg"
   ],
   "group": "Visayas",
   "population": "550000",

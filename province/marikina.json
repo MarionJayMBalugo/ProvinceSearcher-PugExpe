@@ -1,9 +1,9 @@
 {
   "name": "Marikina",
   "img": [
-    "/public/images/mar.jpg",
-    "/public/images/mar1.jpg",
-    "/public/images/mar2.jpg"
+    "/images/mar.jpg",
+    "/images/mar1.jpg",
+    "/images/mar2.jpg"
   ],
   "group": "luzon",
   "population": "500000",
